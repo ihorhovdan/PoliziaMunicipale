@@ -1,0 +1,40 @@
+﻿﻿@{
+    ViewData["Title"] = "Aggiungi Trasgresso";
+}
+
+@model Anagrafica
+
+<h2>Nuovo Trasgressore</h2>
+
+<form class="row g-3" asp-controller="Home" asp-action="AddAnagrafica" method="post">
+    <div class="col-md-6">
+        <label asp-for="@Model.Nome" class="form-label"></label>
+        <input type="text" class="form-control" asp-for="@Model.Nome">
+    </div>
+    <div class="col-md-6">
+        <label asp-for="@Model.Cognome" class="form-label"></label>
+        <input type="text" class="form-control" asp-for="@Model.Cognome">
+    </div>
+    <div class="col-12">
+        <label asp-for="@Model.Indirizzo" class="form-label"></label>
+        <input type="text" class="form-control" asp-for="@Model.Indirizzo" placeholder="1234 Main St">
+    </div>
+    <div class="col-6">
+        <label asp-for="@Model.Citta" class="form-label"></label>
+        <input type="text" class="form-control" asp-for="@Model.Citta">
+    </div>
+    <div class="col-md-6">
+        <label asp-for="@Model.CAP" class="form-label"></label>
+        <input type="text" class="form-control" asp-for="@Model.CAP" maxlength="5">
+    </div>
+    <div class="col-md-6">
+        <label asp-for="@Model.Cod_Fisc" class="form-label"></label>
+        <input type="text" class="form-control" asp-for="@Model.Cod_Fisc" maxlength="16">
+    </div>
+
+ 
+
+    <div class="col-12">
+        <button class="btn btn-primary">Aggiungi</button>
+    </div>
+</form>
